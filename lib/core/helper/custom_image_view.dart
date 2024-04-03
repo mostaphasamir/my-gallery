@@ -126,6 +126,7 @@ class CustomImageView extends StatelessWidget {
         fit: fit,
         imageUrl: url!,
         color: color,
+        placeholder: placeholder,
         // placeholder:placeholder??(context, url) => CustomImageView(
         //   width: width,
         //   height: height,

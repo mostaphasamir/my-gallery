@@ -40,7 +40,7 @@ Future<Object?> showAppDialog(
                   margin: EdgeInsets.symmetric(horizontal: AppWidth.w42),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(AppRadius.r32),
-                    color: AppColors.white.withOpacity(0.3),
+                    color: AppColors.white.withOpacity(0.4),
                     border: Border.all(color: AppColors.white),
                   ),
                   child: Material(color: Colors.transparent, child: child),

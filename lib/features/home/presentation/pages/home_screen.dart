@@ -50,12 +50,13 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                 DefaultHomeButton(
+                DefaultHomeButton(
                   title: AppStrings.logout,
                   svgPath: AppAssets.svgLogout,
                   onTap: () {
                     UserLocalStorage().removeUser();
-                    Navigator.pushNamedAndRemoveUntil(context, AppRoutes.loginScreen, (route) => false);
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, AppRoutes.loginScreen, (route) => false);
                   },
                 ),
                 DefaultHomeButton(
@@ -85,6 +86,7 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Container(
                     decoration: BoxDecoration(
+                      color: AppColors.white,
                         borderRadius: BorderRadius.circular(AppRadius.r20),
                         boxShadow: [
                           BoxShadow(
@@ -95,9 +97,14 @@ class HomeScreen extends StatelessWidget {
                           )
                         ]),
                     child: CustomImageView(
-                        // imagePath: AppAssets.imagesTempImage,
-                        // fit: BoxFit.fill,
-                        ),
+
+                      url:
+                          "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg",
+                      fit: BoxFit.fill,
+                      placeholder: (context, p1) {
+                        return Center(child: CircularProgressIndicator());
+                      },
+                    ),
                   );
                 },
               ),
