@@ -16,6 +16,7 @@ class AppTextStyle {
   static TextStyle fontSize25 = TextStyle(fontSize: 25.sp);
   static TextStyle fontSize28 = TextStyle(fontSize: 28.sp);
   static TextStyle fontSize30 = TextStyle(fontSize: 30.sp);
+  static TextStyle fontSize32 = TextStyle(fontSize: 32.sp);
   static TextStyle fontSize50 = TextStyle(fontSize: 50.sp);
 
   ///FontWeight
@@ -35,9 +36,19 @@ class AppTextStyle {
       .merge(fontSize50)
       .copyWith(color: AppColors.darkGrey);
 
+  static TextStyle get baloo32darkGrey500 => segoe
+      .merge(fontWeight500)
+      .merge(fontSize32)
+      .copyWith(color: AppColors.darkGrey);
+
   static TextStyle get segoe30darkGrey700 => segoe
       .merge(fontWeight700)
       .merge(fontSize30)
+      .copyWith(color: AppColors.darkGrey);
+
+  static TextStyle get baloo20darkGrey500 => baloo
+      .merge(fontWeight500)
+      .merge(fontSize20)
       .copyWith(color: AppColors.darkGrey);
 
   static TextStyle get segoe18white700 => segoe

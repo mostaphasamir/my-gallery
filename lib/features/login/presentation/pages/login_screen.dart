@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_gallery/config/app_routes.dart';
 import 'package:my_gallery/core/extentions/dimensions.dart';
 import 'package:my_gallery/core/utils/app_text_style.dart';
 
@@ -37,6 +38,9 @@ class LoginScreen extends StatelessWidget {
                       38.hs,
                       LoginButton(
                         text: AppStrings.submit,
+                        onTap: () {
+                          Navigator.pushNamed(context, AppRoutes.home);
+                        },
                       ),
                     ],
                   ),

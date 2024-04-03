@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:my_gallery/config/app_routes.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../features/home/presentation/pages/home_screen.dart';
 import '../features/login/presentation/pages/login_screen.dart';
 
 class Routes {
   static Route? onGenerateRoute(RouteSettings routeSettings) {
     var args = routeSettings.arguments;
     switch (routeSettings.name) {
-      case AppRoutes.loginScreen :
+      case AppRoutes.loginScreen:
         return routeBuilder(const LoginScreen());
+
+      case AppRoutes.home:
+        return routeBuilder(const HomeScreen());
       default:
         return routeBuilder(
           const Scaffold(),
@@ -18,10 +22,10 @@ class Routes {
   }
 
   static routeBuilder(
-      Widget widget, {
-        PageRouteAnimation? pageRouteAnimation,
-        Duration? duration,
-      }) =>
+    Widget widget, {
+    PageRouteAnimation? pageRouteAnimation,
+    Duration? duration,
+  }) =>
       buildPageRoute(
           widget,
           pageRouteAnimation ?? PageRouteAnimation.SlideBottomTop,
