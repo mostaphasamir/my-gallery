@@ -9,9 +9,11 @@ import 'package:my_gallery/core/utils/app_colors.dart';
 import 'package:my_gallery/core/utils/app_text_style.dart';
 import 'package:my_gallery/generated/app_assets.dart';
 
+import '../../../../core/helper/show_dialog.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../shared/presentation/widgets/default_background_image.dart';
 import '../widgets/default_home_button.dart';
+import '../widgets/upload_dialog.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -43,16 +45,22 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             44.hs,
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                DefaultHomeButton(
+                const DefaultHomeButton(
                   title: AppStrings.logout,
                   svgPath: AppAssets.svgLogout,
                 ),
                 DefaultHomeButton(
                   title: AppStrings.upload,
                   svgPath: AppAssets.svgUpload,
+                  onTap: () {
+                    showAppDialog(
+                      context,
+                      child: const UploadDialogWidget(),
+                    );
+                  },
                 ),
               ],
             ),
@@ -81,9 +89,9 @@ class HomeScreen extends StatelessWidget {
                           )
                         ]),
                     child: CustomImageView(
-                      // imagePath: AppAssets.imagesTempImage,
-                      // fit: BoxFit.fill,
-                    ),
+                        // imagePath: AppAssets.imagesTempImage,
+                        // fit: BoxFit.fill,
+                        ),
                   );
                 },
               ),

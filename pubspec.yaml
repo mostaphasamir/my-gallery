@@ -39,6 +39,7 @@ flutter:
   assets:
     - assets/icons/svg/
     - assets/images/
+    - assets/icons/png/
 
   fonts:
     - family: BalooThambi2

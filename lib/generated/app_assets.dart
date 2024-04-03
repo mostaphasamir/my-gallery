@@ -11,7 +11,8 @@ class AppAssets {
   static const String imagesHomeBackGround = 'assets/images/home_back_ground.png';
   static const String imagesProfile = 'assets/images/profile.png';
   static const String imagesTempImage = 'assets/images/temp_image.png';
-  static const String svgGallery = 'assets/icons/svg/gallery.svg';
+  static const String pngCamera = 'assets/icons/png/camera.png';
+  static const String pngGallery = 'assets/icons/png/gallery.png';
   static const String svgLogout = 'assets/icons/svg/logout.svg';
   static const String svgUpload = 'assets/icons/svg/upload.svg';
 
