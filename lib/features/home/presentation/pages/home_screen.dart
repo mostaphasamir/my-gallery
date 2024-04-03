@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                           )
                         ]),
                     child: CustomImageView(
-
+                      radius: BorderRadius.circular(AppRadius.r20,),
                       url:
                           "https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg",
                       fit: BoxFit.fill,
