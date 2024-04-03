@@ -67,4 +67,9 @@ class AppTextStyle {
       .merge(fontWeight500)
       .merge(fontSize16)
       .copyWith(color: AppColors.mediumGrey);
+
+  static TextStyle get segoe14black400 => segoe
+      .merge(fontWeight400)
+      .merge(fontSize14)
+      .copyWith(color: AppColors.black);
 }

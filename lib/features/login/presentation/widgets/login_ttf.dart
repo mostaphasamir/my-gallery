@@ -17,11 +17,12 @@ class DefaultLoginTTF extends StatelessWidget {
       height: AppHeight.h46,
       child: TextFormField(
         controller:controller ,
+        style: AppTextStyle.segoe14black400,
         decoration: InputDecoration(
           hintText: hintText,
           fillColor: AppColors.white,
           filled: true,
-          hintStyle: AppTextStyle.segoe16mediumGrey500 ,
+          hintStyle: AppTextStyle.segoe14black400 ,
           border: OutlineInputBorder(
             borderSide: BorderSide.none,
             borderRadius: BorderRadius.circular(AppRadius.r22),
