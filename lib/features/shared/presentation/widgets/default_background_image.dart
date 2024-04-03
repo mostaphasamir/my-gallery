@@ -13,7 +13,7 @@ class DefaultBackgroundImage extends StatelessWidget {
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(
-        image: DecorationImage(image: AssetImage(assetsPath??AppAssets.imagesBackground,),fit: BoxFit.fill),
+        image: DecorationImage(image: AssetImage(assetsPath??AppAssets.imagesBackground,),fit: BoxFit.cover),
       ),
       child: child,
     );

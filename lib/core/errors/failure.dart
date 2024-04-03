@@ -13,8 +13,3 @@ class ServerFailure extends Failure{
   const ServerFailure(super.message);
 
 }
-
-class DateBaseFailure extends Failure {
-
-  const DateBaseFailure(super.message);
-}

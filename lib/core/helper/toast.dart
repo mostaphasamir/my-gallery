@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nb_utils/nb_utils.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
+import '../utils/app_colors.dart';
 
 class ToastComponent {
   static showDialog(String msg,
@@ -8,10 +10,10 @@ class ToastComponent {
       Color? color}) {
     Fluttertoast.showToast(
       msg: msg,
-      toastLength: duration != 0 ? duration : Toast.LENGTH_SHORT,
+      toastLength: duration != 0 ? duration : Toast.LENGTH_LONG,
       gravity: gravity,
-      // backgroundColor:color?? AppColors.darkGrey,
-      // textColor: AppColors.white,
+      backgroundColor:color?? AppColors.darkGrey,
+      textColor: AppColors.white,
 
     );
   }

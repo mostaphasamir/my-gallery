@@ -15,6 +15,11 @@ class AppStrings {
   static const String gallery = "Gallery";
   static const String camera = "Camera";
 
+  //error
+
+static const String noInternet = "No Internet";
+static const String someThingWrongHappenedTryAgainLater = "Some Thing Wrong Happened try again later";
+static const String invalidCredentials = "Invalid Credentials";
 
 
 }

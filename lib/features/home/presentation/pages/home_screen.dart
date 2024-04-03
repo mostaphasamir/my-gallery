@@ -1,8 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:my_gallery/config/app_routes.dart';
 import 'package:my_gallery/core/extentions/dimensions.dart';
 import 'package:my_gallery/core/helper/custom_image_view.dart';
+import 'package:my_gallery/core/local_storage/user_local_storage.dart';
 import 'package:my_gallery/core/size/app_radius.dart';
 import 'package:my_gallery/core/size/app_width.dart';
 import 'package:my_gallery/core/utils/app_colors.dart';
@@ -48,9 +50,13 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const DefaultHomeButton(
+                 DefaultHomeButton(
                   title: AppStrings.logout,
                   svgPath: AppAssets.svgLogout,
+                  onTap: () {
+                    UserLocalStorage().removeUser();
+                    Navigator.pushNamedAndRemoveUntil(context, AppRoutes.loginScreen, (route) => false);
+                  },
                 ),
                 DefaultHomeButton(
                   title: AppStrings.upload,
