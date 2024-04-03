@@ -15,7 +15,8 @@ class AppTextStyle {
   static TextStyle fontSize24 = TextStyle(fontSize: 24.sp);
   static TextStyle fontSize25 = TextStyle(fontSize: 25.sp);
   static TextStyle fontSize28 = TextStyle(fontSize: 28.sp);
-  static TextStyle fontSize33 = TextStyle(fontSize: 33.sp);
+  static TextStyle fontSize30 = TextStyle(fontSize: 30.sp);
+  static TextStyle fontSize50 = TextStyle(fontSize: 50.sp);
 
   ///FontWeight
   static const TextStyle fontWeight300 = TextStyle(fontWeight: FontWeight.w300);
@@ -26,10 +27,27 @@ class AppTextStyle {
 
   ///font family
 
-  static const TextStyle font = TextStyle(fontFamily: "");
+  static const TextStyle baloo = TextStyle(fontFamily: "BalooThambi2");
+  static const TextStyle segoe = TextStyle(fontFamily: "Segoe UI");
 
-  static TextStyle get font10black300 => font
-      .merge(fontWeight300)
-      .merge(fontSize10)
-      .copyWith(color: AppColors.black);
+  static TextStyle get segoe50darkGrey700 => segoe
+      .merge(fontWeight700)
+      .merge(fontSize50)
+      .copyWith(color: AppColors.darkGrey);
+
+  static TextStyle get segoe30darkGrey700 => segoe
+      .merge(fontWeight700)
+      .merge(fontSize30)
+      .copyWith(color: AppColors.darkGrey);
+
+  static TextStyle get segoe18white700 => segoe
+      .merge(fontWeight700)
+      .merge(fontSize18)
+      .copyWith(color: AppColors.white);
+
+
+  static TextStyle get segoe16mediumGrey500 => segoe
+      .merge(fontWeight500)
+      .merge(fontSize16)
+      .copyWith(color: AppColors.mediumGrey);
 }
